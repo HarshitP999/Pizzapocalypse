@@ -49,7 +49,7 @@ public class Running : BaseState
    
     private void MovePlayer()
     {
-      
+       
         Vector2 moveAmt = player.GetMovementInput();
         Vector3 moveDirection = new Vector3(moveAmt.x, 0, moveAmt.y);
         player.RB.velocity = moveDirection * player.MoveSpeed;
@@ -57,6 +57,7 @@ public class Running : BaseState
         if (moveDirection != Vector3.zero)
         {
             player.isMoving = true;
+
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             player.transform.rotation = Quaternion.Slerp(player.transform.rotation, targetRotation, player.RotateSpeed * Time.deltaTime);
         }

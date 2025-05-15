@@ -9,9 +9,6 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
 
 
-  
-
-
     [Header("Input Actions")]
 
     public StateMachine stateMachine;
@@ -49,16 +46,6 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-
-
-        ICharacter pelayr = new Pelayr();
-        ICharacter Enamy = new Pelayr();
-
-        IPowerUpPickup powerUp = new PowerUP();
-
-        pelayr.Accept(powerUp);
-
-
 
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
